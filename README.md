@@ -95,13 +95,32 @@ The system simulates an AI-powered technical interviewer by generating interview
 ### Generate Recommendation
 ![Generate Recommendation](Screenshots/generate-recommendation.png)
 
+## Docker Setup
+
+Build Docker Image
+
+```bash
+docker build -t ai-interview-assistant .
+```
+
+Run Docker Container
+
+```bash
+docker run -p 8000:8000 --env-file .env ai-interview-assistant
+```
+
+Swagger Documentation
+
+```text
+http://localhost:8000/docs
+```
+
 ## Future Enhancements
 
 * JWT Authentication
 * Candidate Dashboard
 * PDF Report Generation
 * Interview History Tracking
-* Docker Deployment
 * Cloud Deployment (AWS/GCP)
 
 
