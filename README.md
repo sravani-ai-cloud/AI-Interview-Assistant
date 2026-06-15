@@ -8,6 +8,15 @@ The system simulates an AI-powered technical interviewer by generating interview
 
 ## Features
 
+- AI Interview Question Generator
+- Answer Evaluation Agent
+- Resume Skill Gap Analyzer
+- Interview Scorecard Generator
+- Hiring Recommendation Agent
+- PDF Interview Report Generator
+- Dockerized Deployment
+- Swagger API Documentation
+
 ### Interview Question Generator
 
 * Generates technical interview questions based on technology and experience level.
@@ -74,26 +83,34 @@ The system simulates an AI-powered technical interviewer by generating interview
 
 ## Screenshots
 
-### Swagger Home
+### Swagger UI
 ![Swagger Home](Screenshots/swagger-home.png)
 
-### Generate Questions
-![Generate Questions](Screenshots/generate-questions.png)
+### Question Generation
+![Question Generation](Screenshots/generate-questions.png)
 
-### Evaluate Answer
-![Evaluate Answer](Screenshots/evaluate-answer.png)
+### Interview Generation
+![Interview Generation](Screenshots/generate-interview.png)
 
-### Analyze Resume
-![Analyze Resume](Screenshots/analyze-resume.png)
+### Answer Evaluation
+![Answer Evaluation](Screenshots/evaluate-answer.png)
 
-### Generate Scorecard
-![Generate Scorecard](Screenshots/generate-scorecard.png)
+### Resume Analysis
+![Resume Analysis](Screenshots/analyze-resume.png)
 
-### Generate Interview
-![Generate Interview](Screenshots/generate-interview.png)
+### Scorecard Generation
+![Scorecard Generation](Screenshots/generate-scorecard.png)
 
-### Generate Recommendation
-![Generate Recommendation](Screenshots/generate-recommendation.png)
+### Hiring Recommendation
+![Hiring Recommendation](Screenshots/generate-recommendation.png)
+
+### PDF Report Generation API
+![PDF Report Generation](Screenshots/generate-report.png)
+
+### Generated PDF Report
+![Generated PDF Report](Screenshots/pdf-report-output.png)
+
+
 
 ## Docker Setup
 
@@ -119,7 +136,6 @@ http://localhost:8000/docs
 
 * JWT Authentication
 * Candidate Dashboard
-* PDF Report Generation
 * Interview History Tracking
 * Cloud Deployment (AWS/GCP)
 
