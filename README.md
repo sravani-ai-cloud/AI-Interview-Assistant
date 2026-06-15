@@ -1,13 +1,13 @@
 # AI Interview Assistant
 
 Features
-- Question Generation Agent
-- Interview Generator Agent
-- Answer Evaluation Agent
-- FastAPI
-- Gemini AI
-- Swagger UI
-- Docker
+
+- AI Interview Question Generator
+- AI Answer Evaluation
+- Resume Skill Gap Analysis
+- Interview Scorecard Generator
+- FastAPI REST APIs
+- Gemini AI Integration
 
 Tech Stack:
 - Python
