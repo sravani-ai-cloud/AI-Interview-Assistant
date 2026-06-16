@@ -110,6 +110,15 @@ The system simulates an AI-powered technical interviewer by generating interview
 ### Generated PDF Report
 ![Generated PDF Report](Screenshots/pdf-report-output.png)
 
+### User Registration
+![User Registration](Screenshots/register-user.png)
+
+### User Login (JWT Authentication)
+![User Login](Screenshots/login-user.png)
+
+### Protected Profile Endpoint
+![Protected Profile](Screenshots/profile-auth-success.png)
+
 
 
 ## Docker Setup
@@ -134,7 +143,6 @@ http://localhost:8000/docs
 
 ## Future Enhancements
 
-* JWT Authentication
 * Candidate Dashboard
 * Interview History Tracking
 * Cloud Deployment (AWS/GCP)
