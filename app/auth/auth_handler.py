@@ -1,28 +1,62 @@
+from app.database.db import SessionLocal
+from app.database.user_crud import (
+    get_user_by_username,
+    create_user
+)
 from jose import jwt
 from datetime import datetime, timedelta
 import os
+from app.auth.password_handler import (
+    hash_password,
+    verify_password
+)
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = "HS256"
 
 # Temporary user storage
-users_db = {}
+### users_db = {}
 
 def register_user(username, password):
 
-    if username in users_db:
+    db = SessionLocal()
+
+    existing_user = get_user_by_username(
+        db,
+        username
+    )
+
+    if existing_user:
         return {"message": "User already exists"}
 
-    users_db[username] = password
+    hashed_password = hash_password(password)
 
-    return {"message": "User registered successfully"}
+    create_user(
+        db,
+        username,
+        hashed_password
+    )
+
+    return {
+        "message": "User registered successfully"
+    }
 
 def login_user(username, password):
 
-    if username not in users_db:
+    db = SessionLocal()
+
+    user = get_user_by_username(
+        db,
+        username
+    )
+
+    if not user:
         return {"message": "Invalid username"}
 
-    if users_db[username] != password:
+    if not verify_password(
+        password,
+        user.password
+    ):
         return {"message": "Invalid password"}
 
     token = jwt.encode(

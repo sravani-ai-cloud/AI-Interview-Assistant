@@ -81,6 +81,13 @@ The system simulates an AI-powered technical interviewer by generating interview
 * POST /generate-scorecard
 * POST /generate-recommendation
 
+## Security Features
+
+- JWT Authentication
+- Password Hashing using bcrypt
+- Protected Profile Endpoint
+- Environment Variable Based Secret Key
+
 ## Screenshots
 
 ### Swagger UI

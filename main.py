@@ -1,3 +1,6 @@
+from app.database.db import engine
+from app.models.user_model import User
+from app.database.db import Base
 from fastapi import FastAPI
 
 from app.routes.question_routes import router as question_router
@@ -11,6 +14,7 @@ from app.auth.auth_routes import router as auth_router
 
 app = FastAPI(title="AI Interview Assistant")
 
+Base.metadata.create_all(bind=engine)
 app.include_router(question_router)
 app.include_router(interview_router)
 app.include_router(feedback_router)
