@@ -174,6 +174,12 @@ FastAPI APIs
 ### Protected Profile Endpoint
 ![Protected Profile](Screenshots/profile-auth-success.png)
 
+### SQLite User Database
+
+Stores registered users with bcrypt hashed passwords.
+
+![Database Users](Screenshots/database-users.png)
+
 ## Key Achievements
 
 - Built 9 REST APIs using FastAPI
