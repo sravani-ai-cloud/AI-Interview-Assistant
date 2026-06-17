@@ -14,8 +14,6 @@ from app.auth.password_handler import (
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = "HS256"
 
-# Temporary user storage
-### users_db = {}
 
 def register_user(username, password):
 

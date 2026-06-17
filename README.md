@@ -88,6 +88,15 @@ The system simulates an AI-powered technical interviewer by generating interview
 - Protected Profile Endpoint
 - Environment Variable Based Secret Key
 
+## Authentication & Security
+
+- JWT Token Authentication
+- Password Hashing using bcrypt
+- SQLite User Database
+- SQLAlchemy ORM
+- Protected Profile Endpoint
+- Environment Variable Based Secret Key
+
 ## Screenshots
 
 ### Swagger UI
