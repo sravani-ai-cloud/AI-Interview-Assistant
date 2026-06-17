@@ -1,7 +1,10 @@
+app.log
+users.db
+
 venv/
 .env
 
-__pycache__/
+**pycache**/
 *.pyc
 
 .vscode/
@@ -9,4 +12,5 @@ __pycache__/
 *.log
 Interview_Report.pdf
 
-users.db
+.idea/
+.DS_Store

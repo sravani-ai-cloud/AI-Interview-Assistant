@@ -1,3 +1,6 @@
+from app.services.exception_handler import (
+    global_exception_handler
+)
 from app.database.db import engine
 from app.models.user_model import User
 from app.database.db import Base
@@ -14,6 +17,10 @@ from app.auth.auth_routes import router as auth_router
 
 app = FastAPI(title="AI Interview Assistant")
 
+app.add_exception_handler(
+    Exception,
+    global_exception_handler
+)
 Base.metadata.create_all(bind=engine)
 app.include_router(question_router)
 app.include_router(interview_router)

@@ -1,3 +1,4 @@
+from app.services.logger import logger
 from app.database.db import SessionLocal
 from app.database.user_crud import (
     get_user_by_username,
@@ -35,6 +36,8 @@ def register_user(username, password):
         hashed_password
     )
 
+    logger.info(f"User registered: {username}")
+
     return {
         "message": "User registered successfully"
     }
@@ -56,6 +59,8 @@ def login_user(username, password):
         user.password
     ):
         return {"message": "Invalid password"}
+
+    logger.info(f"User logged in: {username}")
 
     token = jwt.encode(
         {

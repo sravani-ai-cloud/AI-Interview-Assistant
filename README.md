@@ -6,6 +6,30 @@ AI Interview Assistant is a multi-agent AI application built using FastAPI and G
 
 The system simulates an AI-powered technical interviewer by generating interview questions, evaluating candidate answers, analyzing resumes against job descriptions, generating interview scorecards, and providing hiring recommendations.
 
+Architecture
+User
+ │
+ ▼
+FastAPI APIs
+ │
+ ├── Authentication Layer
+ │      ├── JWT
+ │      ├── bcrypt
+ │      └── SQLite + SQLAlchemy
+ │
+ ├── Gemini AI Agents
+ │      ├── Question Generator
+ │      ├── Interview Simulator
+ │      ├── Resume Analyzer
+ │      ├── Scorecard Generator
+ │      └── Hiring Recommendation
+ │
+ ├── PDF Report Generator
+ │
+ ├── Logging
+ │
+ └── Global Exception Handler
+
 ## Features
 
 - AI Interview Question Generator
@@ -68,8 +92,12 @@ The system simulates an AI-powered technical interviewer by generating interview
 * FastAPI
 * Google Gemini AI
 * Pydantic
-* Uvicorn
+* SQLAlchemy
+* SQLite
+* JWT Authentication
+* bcrypt Password Hashing
 * REST APIs
+* Uvicorn
 * Docker
 
 ## API Endpoints
@@ -80,13 +108,10 @@ The system simulates an AI-powered technical interviewer by generating interview
 * POST /analyze-resume
 * POST /generate-scorecard
 * POST /generate-recommendation
-
-## Security Features
-
-- JWT Authentication
-- Password Hashing using bcrypt
-- Protected Profile Endpoint
-- Environment Variable Based Secret Key
+* POST /generate-report
+* POST /register
+* POST /login
+* GET  /profile
 
 ## Authentication & Security
 
@@ -96,6 +121,20 @@ The system simulates an AI-powered technical interviewer by generating interview
 - SQLAlchemy ORM
 - Protected Profile Endpoint
 - Environment Variable Based Secret Key
+
+## Monitoring & Observability
+
+- Application Logging
+- User Registration Tracking
+- Login Activity Tracking
+- Global Exception Handling
+
+## Deployment
+
+- Dockerized Application
+- FastAPI REST APIs
+- Swagger Documentation
+- SQLite Database
 
 ## Screenshots
 
@@ -135,7 +174,16 @@ The system simulates an AI-powered technical interviewer by generating interview
 ### Protected Profile Endpoint
 ![Protected Profile](Screenshots/profile-auth-success.png)
 
+## Key Achievements
 
+- Built 9 REST APIs using FastAPI
+- Implemented JWT Authentication & Authorization
+- Secured user passwords using bcrypt hashing
+- Integrated Google Gemini AI for interview simulation
+- Generated automated PDF Interview Reports
+- Implemented SQLite database using SQLAlchemy ORM
+- Added centralized logging and exception handling
+- Dockerized application for deployment
 
 ## Docker Setup
 
@@ -157,10 +205,5 @@ Swagger Documentation
 http://localhost:8000/docs
 ```
 
-## Future Enhancements
-
-* Candidate Dashboard
-* Interview History Tracking
-* Cloud Deployment (AWS/GCP)
 
 
